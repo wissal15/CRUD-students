@@ -1,0 +1,7 @@
+  {% for i in author %}
+   <h1>Détails de l'auteur</h1>
+<img src="{{ asset(i.picture) }}" alt="{{ i.username }}" width="150">
+<p>Nom : {{ i.username }}</p>
+<p>Email : {{ i.email }}</p>
+<p>Nombre de livres : {{ i.nb_books }}</p>
+ {% endfor %}

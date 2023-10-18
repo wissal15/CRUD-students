@@ -1,0 +1,22 @@
+<h1>Students List</h1>
+<table border="1">
+<tr>
+<th>Id</th>
+<th>Name</th>
+<th>email</th>
+<th>Age</th>
+<th>Action</th>
+</tr>
+<tr>
+<tr> {% for t in response %} </tr>
+<td>{{t.id}}</td>
+<td>{{t.name}}</td>
+<td>{{t.email}}</td>
+<td>{{t.age}}</td>
+<td> <a href="{{path('remove',{'id' :t.id})}}">Supprimer</a> </td>
+<td> <a href="{{path('edit',{'id' :t.id})}}">Modifier</a> </td>
+
+{% endfor %}
+</tr>
+</table>
+<td> <a href="{{path('add1')}}">Ajouter</a> </td>

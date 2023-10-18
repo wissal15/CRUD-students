@@ -1,0 +1,11 @@
+<h1> Bonjour: {{n | upper}}</h1>
+{% set nb_totale = 0 %}
+{% if T > 0 %}
+<h3> Le nombre des auteurs:{{T| length }}</h3>
+{% for i in T %}
+{{ i.username | upper }}
+<a href="{{path('D', {'id':i.username |upper })}}">details</a>
+{%set nb_totale = nb_totale + i.nb_books  %}
+{% endfor %}
+<p>nombre de books totale est:{{nb_totale}}</p>
+{% endif %}
